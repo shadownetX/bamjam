@@ -9,6 +9,7 @@ services:
     user: www-data
     links:
       - mysql
+      - memcached
     volumes:
       - ".:/var/www"
     env_file:
