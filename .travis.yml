@@ -1,24 +1,20 @@
-language: php
-
-php:
-- "7.3"
-
-cache:
-  directories:
-    - $HOME/.composer/cache/files
-    
-before_install:
-  - composer self-update
-
-install:
-  - composer install
+#language: php
+#php:
+  #- '7.3'
+  #- '7.2'
+  #- '7.1'
+#cache:
+  #directories:
+    #- $HOME/.composer/cache/files
+#before_install:
+  #- composer self-update
+#install:
+  #- composer install
   #- ./bin/phpunit install
-
 #after_install:
   #- php ./vendor/bin/php-cs-fixer fix src --rules=@Symfony
-
-script:
-#  - ./bin/phpunit
+#script:
+  #- ./bin/phpunit
   # this checks that the source code follows the Symfony Code Syntax rules
   #- ./vendor/bin/php-cs-fixer fix --diff --dry-run -v
   # this checks that the application doesn't use dependencies with known security vulnerabilities
