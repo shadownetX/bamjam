@@ -18,26 +18,26 @@
 
 | **For short** | **Custom command**                  | **Purpose**                          |
 |---------------|-------------------------------------|---------------------------------------|
-| BUILD         | ```bin/docker build```              | Build the app                         |
-| RUN           | ```bin/docker run```                | Run the app                           |
-| STOP          | ```bin/docker stop```               | Stop the app                          |
-| DESTROY       | ```bin/docker destroy```            | Destroy the app                       |
-| INSTALL       | ```bin/docker install```            | Install the app                       |
-| EXPELLIARMUS  | ```bin/docker expelliarmus```       | Prune docker env                      |
-| AVADAKEDAVRA  | ```bin/docker avadakedavra```       | Stop then destroy containers + images |
+| BUILD         | ```bin/app build```              | Build the app                         |
+| RUN           | ```bin/app run```                | Run the app                           |
+| STOP          | ```bin/app stop```               | Stop the app                          |
+| DESTROY       | ```bin/app destroy```            | Destroy the app                       |
+| INSTALL       | ```bin/app install```            | Install the app                       |
+| EXPELLIARMUS  | ```bin/app expelliarmus```       | Prune docker env                      |
+| AVADAKEDAVRA  | ```bin/app avadakedavra```       | Stop then destroy containers + images |
 
 ### Access to containers
 
 | **For short** | **Custom command**                    | **Purpose**                                            |
 |---------------|---------------------------------------|--------------------------------------------------------|
-| EXEC-PHP      | ```bin/docker exec-php [ARGS]```      | Execute a command inside the php container             |
-| EXEC-ROOT     | ```bin/docker exec-php-root [ARGS]``` | Execute a command as ROOT inside the php container     |
-| SH            | ```bin/docker sh```                   | Access sh                                              |
-| COMPOSER      | ```bin/docker composer [ARGS]```      | Execute composer                                       |
-| SYMFONY       | ```bin/docker console [ARGS]```       | Execute Symfony's console (bin/console)                |
+| EXEC-PHP      | ```bin/app exec-php [ARGS]```      | Execute a command inside the php container             |
+| EXEC-ROOT     | ```bin/app exec-php-root [ARGS]``` | Execute a command as ROOT inside the php container     |
+| SH            | ```bin/app sh```                   | Access sh                                              |
+| COMPOSER      | ```bin/app composer [ARGS]```      | Execute composer                                       |
+| SYMFONY       | ```bin/app console [ARGS]```       | Execute Symfony's console (bin/console)                |
 
 ### Informations about containers
 
 | **For short** | **Custom command**                           | **Purpose**                           |
 |---------------|----------------------------------------------|---------------------------------------|
-| PS            | ```bin/docker ps```                          | List all running containers           |
+| PS            | ```bin/app ps```                          | List all running containers           |
