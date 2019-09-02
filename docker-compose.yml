@@ -9,7 +9,7 @@ services:
     user: www-data
     links:
       - mysql
-      - memcached
+#      - memcached
     volumes:
       - ".:/var/www"
     env_file:
@@ -37,8 +37,8 @@ services:
       - "./.data/db/mysql:/var/lib/mysql"
     env_file:
       - ${ENV_FILE_DIR}
-  memcached:
-    container_name: ${APP_NAME}-memcached
-    image: memcached:latest
-    ports:
-        - "11211:11211"
+#  memcached:
+#    container_name: ${APP_NAME}-memcached
+#    image: memcached:latest
+#    ports:
+#        - "11211:11211"
