@@ -97,6 +97,12 @@ exec-php-root ()
     $DOCKER_COMPOSE exec -T php $ARGS
 }
 
+exec-node ()
+{
+    declare ARGS=$@
+    $DOCKER_COMPOSE exec node $ARGS
+}
+
 composer ()
 {
     declare ARGS=$@
@@ -123,6 +129,7 @@ usage ()
     sh                  Run sh inside php container
     exec-php            Execute command inside container php
     exec-php-root       Execute command inside container php as root
+    exec-node           Execute command inside container node
     composer            Execute composer inside container php
     console             Execute bin/console
     "
@@ -148,7 +155,7 @@ main ()
 
     COMMAND=$1
 
-    if [[ ! "$COMMAND" =~ ^build|run|expelliarmus|install|stop|destroy|avadakedavra|console|ps|sh|exec-php|exec-php-root|composer$ ]]; then
+    if [[ ! "$COMMAND" =~ ^build|run|expelliarmus|install|stop|destroy|avadakedavra|console|ps|sh|exec-php|exec-php-root|exec-node|composer$ ]]; then
         echo "$COMMAND is not a supported command"
         exit 1
     fi
