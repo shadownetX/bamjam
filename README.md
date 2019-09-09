@@ -9,7 +9,8 @@
 
 **About this stack:**
 
-* **[nginx:1.15-alpine]** :  Use ```http://www.thbdt.primary``` with this configuration : ```sudo sh -c "echo '127.0.0.1   www.thbdt.primary' >> /etc/hosts"```
+* **[nginx:1.15-alpine]** :  
+> Use ```http://www.thbdt.primary``` with this configuration : ```sudo sh -c "echo '127.0.0.1   www.thbdt.primary' >> /etc/hosts"```
 * **[php:7.3-fpm-alpine]** 
 * **[mysql:lastest]**
 * **[node:10-alpine]**
