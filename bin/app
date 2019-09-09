@@ -46,7 +46,13 @@ install ()
     echo "- Generate DB architecture"
     echo ""
 
-    #$DOCKER_COMPOSE exec -T --user www-data php bin/console doctrine:schema:update --force
+    $DOCKER_COMPOSE exec -T --user www-data php bin/console doctrine:schema:update --force
+
+    echo ""
+    echo "- Load DB fixtures"
+    echo ""
+
+    $DOCKER_COMPOSE exec -T --user www-data php bin/console doctrine:fixtures:load
 
     $DOCKER_COMPOSE ps
 }

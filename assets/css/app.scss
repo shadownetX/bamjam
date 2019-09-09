@@ -1,5 +1,8 @@
-$light: #eeb4f0;
+@import "~bootstrap/scss/bootstrap";
+
+$light: lightgray;
 
 body {
     background-color: $light;
 }
+
