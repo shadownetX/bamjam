@@ -1,0 +1,16 @@
+#!/bin/bash
+
+CHECK_MARK="\033[0;32m\xE2\x9C\x94\033[0m"
+
+title ()
+{
+    text=$1
+    new_line
+    echo -e "\t\e[4m${text}\e[0m"
+    new_line
+}
+
+new_line ()
+{
+    echo
+}
