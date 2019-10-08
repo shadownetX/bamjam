@@ -37,7 +37,7 @@ class AppFixtures extends Fixture
     {
         return [
             ['Jennifer Goines', 'j_goines', 'admin', 'j_goines@test.com', ['ROLE_ADMIN']],
-            ['Cassandra Railly', 'k_railly', 'user', 'k_railly@test.com', ['ROLE_USER']],
+            ['Cassandra Railly', 'k_railly', 'writer', 'k_railly@test.com', ['ROLE_WRITER']],
         ];
     }
 }
