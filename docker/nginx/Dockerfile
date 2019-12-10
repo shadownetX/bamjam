@@ -1,4 +1,4 @@
-FROM nginx:1.16-alpine
+FROM nginx:1.15-alpine
 
 RUN apk --no-cache add shadow && \
     rm -rf /var/cache/apk/*

@@ -9,7 +9,6 @@ services:
     user: www-data
     links:
       - mysql
-      - memcached
     volumes:
       - ".:/var/www"
     env_file:
@@ -37,8 +36,12 @@ services:
       - "./.data/db/mysql:/var/lib/mysql"
     env_file:
       - ${ENV_FILE_DIR}
-  memcached:
-    container_name: ${APP_NAME}-memcached
-    image: memcached:latest
-    ports:
-        - "11211:11211"
+  node:
+    container_name: ${APP_NAME}-node
+    build: docker/node
+    user: node
+    volumes:
+      - ".:/var/www"
+    env_file:
+      - ${ENV_FILE_DIR}
+    command: sh -c "npm install && npm run watch"
